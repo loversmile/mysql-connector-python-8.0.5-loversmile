@@ -1,3 +1,19 @@
+add by loversmile
+
+example 
+
+import mylib.mysql.connector as mysql
+#上面这行是测试的时候放的，安装好了直接import mysql.connector as mysql即可
+conn = mysql.connect(host='localhost', user='root',passwd='admin',db='test',charset='utf8')
+c = conn.cursor(mysqlrow=True)
+c.execute("SELECT name,age FROM student;")
+for row in c.fetchall(): 
+    print row[0] 
+    print row["name"]
+
+end by loversmile
+
+
 ==========================
 MySQL Connector/Python 8.0
 ==========================
